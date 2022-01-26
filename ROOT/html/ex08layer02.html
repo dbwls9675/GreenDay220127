@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<style>
+div {
+	border: 3px solid black;
+	padding: 3px;
+	margin: 3px;
+	border-radius: 6px;
+	box-sizing: border-box;
+}
+
+.contents {
+	width: 1024px;
+	margin: 10px auto;
+}
+
+.header {
+	height: 120px;
+}
+
+.left, .center,.right {
+	height: 300px;
+	float: left;
+	overflow: hidden;
+}
+
+.left {
+	width: 200px;
+}
+
+.center {
+	width: 590px;
+}
+.right{
+	width: 200px;
+}
+
+.footer {
+	height: 80px;
+	clear: both;
+}
+
+.banner{
+	height: 120px;
+	background: skyblue;
+}
+
+.main{
+	height: 160px;
+}
+
+.p{
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<div class="contents">
+		<div class="header"></div>
+		<div class="left">
+			<p>좌측 메뉴</p>
+			<p>로그인</p>
+		</div>
+		<div class="center">
+			<div class="banner">banner</div>
+			<div class="main">main</div>
+		</div>
+		<div class="right">
+			<p>우측 메뉴</p>
+			<p>광고판</p>
+		</div>
+		<div class="footer"></div>
+	</div>
+</body>
+
+</html>
