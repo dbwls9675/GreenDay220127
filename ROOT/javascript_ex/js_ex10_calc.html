@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	a항 : <input type="text" size = "3" name="a" value="5"/><br>
+	b항 : <input type="text" size = "3" name="b" value="3"/><br>
+	연산자 : <input type="text" size = "3" name="oper" value="*"/><br>
+	<button id = "resultBtn">결과 확인</button><br>
+	<div class="result">결과 : </div>
+
+	<script type="text/javascript">
+	var aInput = document.querySelector("input[name=a]");
+	var bInput = document.querySelector("input[name=b]");
+	var operInput = document.querySelector("input[name=oper]");
+	
+	var resultBtn = document.getElementById("resultBtn");
+	var resultDiv = document.getElementsByClassName("result")[0];
+	console.dir(resultBtn);
+	
+	resultBtn.onclick = function(){
+		var a = aInput.value;
+		var b = bInput.value;
+		var oper = operInput.value;
+		var result = 0;
+		
+		switch(oper){
+		case "+" : result = a + b; break;
+		case "-" : result = a - b; break;
+		case "*" : result = a * b; break;
+		case "/" : result = a / b; break;
+		}
+		
+		resultDiv.innerHTML = `결과 : ${a} ${oper} ${b} = ${result}`;
+	}
+	
+	
+	
+	</script>
+</body>
+</html>

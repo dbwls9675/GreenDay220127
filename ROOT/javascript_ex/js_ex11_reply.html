@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>댓글 입력 프로그램</h1>
+	댓글입력 : <input type="text" name=user size="4" value="user01">
+	<input type="text" name="message" >
+	<input type="button" value="확인" id="replyBtn" />
+	<hr />
+	<ul>
+		<li>관리자 >> 댓글을 입력하세요.</li>
+	</ul>
+	
+	<script type="text/javascript">
+	//1. DOM 요소 객체 준비
+		var user = document.querySelector("input[name=user]");
+		var message = document.querySelector("input[name=message]");
+		var replyBtn = document.getElementById("replyBtn");
+		var msgList = document.getElementsByTagName("ul")[0];
+		// 2. 이벤트 핸들러 작성
+		// 3. 처리 및 적용
+		
+		replyBtn.onclick = function(){
+			
+		}
+	</script>
+</body>
+</html>

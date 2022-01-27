@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form>
+		성명 : <input type="text" name="name" /><br /> 
+		이메일 : <input type="text"name="email" /><br /> 
+		<input type="submit" value="전송하기" />
+	</form>
+
+	<script type="text/javascript">
+		var form = document.forms[0];//문서안에 있는 모든 form을 참조
+		//console.dir(form);
+
+		form.onsubmit = function() {
+			// 모든 이벤트 핸들러에는 event객체가 자동 생성된다.
+			event.preventDefault();
+			//console.log("전송 버튼 눌렀다!");
+			// 이벤트 핸들러 안에서 this는 이벤트가 발생한 요소 자체이다.
+			if (this.name.value == "") {
+				alert("성명을 입력하세요!");
+				this.name.focus();
+				return;
+			}
+
+			if (this.email.value == "") {
+				alert("이메일을 입력하세요!");
+				this.email.focus();
+				return;
+			}
+			// 모든 검사를 끝내면 전송하기
+			this.method = "GET";
+			this.action = "http://www.naver.com";//form 입력 후 버튼 누르면 네이버로 이동.
+			this.submit();
+		}
+	</script>
+</body>
+</html>
